@@ -1,0 +1,121 @@
+LEVEL 1
+
+Greetings.
+Now you have your own robot in this robohub
+You can use any JavaScript and special commands
+To use this commands just call it like js function
+Use command help() for help
+map(legend)
+
+###
+#*#
+# #
+#@#
+###
+
+undefined
+while (isFree("north")) {
+	north();
+}
+Congratulation, you win this level
+"next"
+
+LEVEL 2
+
+map(legend)
+
+###################
+#@               *#
+###################
+
+undefined
+while (isFree("east")) {
+	east();
+}
+Congratulation, you win this level
+"next"
+
+LEVEL 3
+
+while
+    if (isFree(south))
+        south();
+    else (isFree(east))
+        east();
+Uncaught SyntaxError: Unexpected token if(…)
+while
+    if (isFree(south))
+        south();
+    else if (isFree(east))
+        east();
+Uncaught SyntaxError: Unexpected token if(…)
+while (isFree(south)){
+    south();
+    east();
+}
+Uncaught TypeError: Cannot read property 'y' of undefined(…)
+while (isFree("south")){
+    south();
+    east();
+}
+Congratulation, you win this level
+
+LEVEL 4
+
+map(legend)
+
+#########
+# #######
+# @  ####
+#### ####
+####  ###
+##### ###
+##### ###
+#####   #
+#######*#
+#########
+
+undefined
+while (isFree("east")||(isFree("south"))) {
+	if (isFree("east")) {
+	east ();
+	}
+	else {
+	south ();
+	}
+}
+Congratulation, you win this level
+
+LEVEL 5
+
+restart()
+true
+map(legend)
+
+#########
+#@      #
+####### #
+#   #   #
+# # # ###
+# # # ###
+# #   ###
+# #######
+#      *#
+#########
+
+undefined
+var n;
+for (var i = 0; i < 31; i++) {
+  if (isFree("south") & (n!='n')) {
+    south(); n='s'; continue;
+  }
+  else if (isFree("east") & (n!='w')) {
+    east(); n='e'; continue;
+  }
+  else if (isFree("west") & (n!='e')) {
+    west(); n='w'; continue;
+  }
+  else {
+    north(); n='n'; continue;
+  }
+}
